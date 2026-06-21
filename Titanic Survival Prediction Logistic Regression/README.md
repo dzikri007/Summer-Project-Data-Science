@@ -5,7 +5,6 @@ Repositoti ini berisi proyek baseline **Titanic Survival Prediction** menggunaka
 Proyek ini dikembangkan menggunakan dataset resmi dari kompetisi legendaris [Kaggle Titanic: Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic).
 
 ---
-
 ## Alur Proyek
 
 ### 1. Eksplorasi Data & Pembersihan awal (EDA)
