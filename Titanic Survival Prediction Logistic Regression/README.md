@@ -1,35 +1,11 @@
 # 🚢 Titanic Survival Prediction: Logistic Regression & SVM Baseline
 
-[![Python Version](https://img.shields.io/badge/python-3.12-blue.svg?style=flat-flat&logo=python&logoColor=white)](https://www.python.org/)
-[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-%23F37626.svg?style=flat&logo=jupyter&logoColor=white)](https://jupyter.org/)
-
 Repositoti ini berisi proyek baseline **Titanic Survival Prediction** menggunakan **Logistic Regression** dan **Support Vector Machine (SVM)** dengan fokus pada kemudahan pemahaman bagi pemula (*beginner-friendly*). Proyek ini berfokus pada Analisis Data Eksploratif (EDA), manipulasi fitur sederhana (*Feature Engineering*), dan pembuatan alur preprocessing data terstandarisasi menggunakan Pipeline Scikit-Learn.
 
 Proyek ini dikembangkan menggunakan dataset resmi dari kompetisi legendaris [Kaggle Titanic: Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic).
 
 ---
-
-## 📂 Struktur Direktori
-
-```text
-Titanic Survival Prediction Logistic Regression/
-├── Data/
-│   ├── train.csv                # Dataset latih (891 baris)
-│   ├── test.csv                 # Dataset uji untuk submission
-│   └── gender_submission.csv    # Format submission acuan
-├── titanic-survival-prediction-logistic-regression.ipynb   # Notebook utama
-└── README.md                    # Dokumentasi proyek
-```
-
-- **Notebook Utama**: [titanic-survival-prediction-logistic-regression.ipynb](file:///c:/latihan/Summer Project/Titanic Survival Prediction Logistic Regression/titanic-survival-prediction-logistic-regression.ipynb)
-- **Dataset Latih**: [train.csv](file:///c:/latihan/Summer Project/Titanic Survival Prediction Logistic Regression/Data/train.csv)
-- **Dataset Uji**: [test.csv](file:///c:/latihan/Summer Project/Titanic Survival Prediction Logistic Regression/Data/test.csv)
-
----
-
-## 🔍 Alur Proyek
+## Alur Proyek
 
 ### 1. Eksplorasi Data & Pembersihan awal (EDA)
 - Menganalisis ukuran data (891 baris, 12 fitur pada dataset latih) serta tipe data masing-masing kolom.
@@ -57,7 +33,7 @@ Dua algoritma machine learning dilatih dan divalidasi:
 
 ---
 
-## 📊 Hasil Evaluasi & Performa Model
+## Hasil Evaluasi & Performa Model
 
 Berikut adalah ringkasan hasil akurasi model pada data validasi (split 20%) dan rata-rata 5-Fold Cross Validation:
 
@@ -71,24 +47,7 @@ Berikut adalah ringkasan hasil akurasi model pada data validasi (split 20%) dan 
 
 ---
 
-## 🛠️ Cara Menjalankan Notebook
-
-### 1. Prasyarat (Prerequisites)
-Pastikan Anda sudah menginstal Python (disarankan versi 3.8 ke atas) beserta library berikut:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
-```
-
-### 2. Menjalankan Jupyter Notebook
-Jalankan perintah berikut di terminal Anda untuk membuka notebook:
-```bash
-jupyter notebook "c:/latihan/Summer Project/Titanic Survival Prediction Logistic Regression/titanic-survival-prediction-logistic-regression.ipynb"
-```
-Setelah Jupyter terbuka di browser, Anda dapat mengeksekusi sel kode satu per satu mulai dari impor pustaka hingga pembuatan file submission.
-
----
-
-## 🚀 Rencana Pengembangan Selanjutnya
+## Rencana Pengembangan Selanjutnya
 Untuk meningkatkan akurasi model agar menembus batas >80% pada submission Kaggle, langkah-langkah berikut direkomendasikan:
 1. **Fitur Tambahan**: Membuat fitur `IsAlone` (apakah bepergian sendiri) dan mendeteksi kelompok keluarga berdasarkan kesamaan nama belakang.
 2. **Algoritma Ensemble**: Menggunakan model berbasis pohon keputusan (*decision trees*) seperti **Random Forest**, **XGBoost**, atau **LightGBM** yang lebih andal dalam menangani hubungan non-linear pada dataset Titanic.
