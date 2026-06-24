@@ -6,7 +6,7 @@ Dalam contoh konfigurasi saat ini, proyek ini digunakan untuk mengumpulkan tweet
 
 ---
 
-## ⚙️ Persyaratan Sistem & Instalasi
+## Persyaratan Sistem & Instalasi
 
 Tweet-Harvest dibuat menggunakan Node.js dan memanfaatkan Playwright (Chromium) untuk mensimulasikan pencarian di Twitter. Oleh karena itu, langkah-langkah berikut diperlukan:
 
