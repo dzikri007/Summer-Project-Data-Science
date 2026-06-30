@@ -1,0 +1,14 @@
+google-api-python-client
+httplib2
+pyasn1-modules
+pyasn1
+protobuf
+uritemplate
+cryptography
+google-auth-httplib2
+google-auth
+google-api-core
+googleapis-common-protos
+proto-plus
+transformers
+torch
