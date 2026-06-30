@@ -13,9 +13,14 @@ def get_all_comments(video_id, api_key):
         
         print("Mulai mengambil komentar...")
         while True:
-            # Mengirim permintaan API untuk mendapatkan komentar video per halaman
-            # Catatan: maxResults dibatasi maksimal 100 oleh YouTube API. 
-            # Kita tetap bisa mengambil semua komentar karena menggunakan perulangan pageToken.
+            """
+            Mengirim permintaan API untuk mendapatkan komentar video per halaman
+            Catatan: 
+            maxResults dibatasi maksimal 100 oleh YouTube API.  
+            Tapi kita tetap bisa mengambil semua komentar karena menggunakan perulangan pageToken. 
+
+            """
+            
             response = youtube.commentThreads().list(
                 part='snippet',
                 videoId=video_id,
