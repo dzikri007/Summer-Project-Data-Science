@@ -3,9 +3,12 @@
 Selamat datang di repositori utama **Summer Project**! 
 
 **Kenapa ada proyek ini?**
-Berawal dari masa libur semester 4, saya tidak berhasil mendapatkan pekerjaan magang atau posisi di perusahaan mana pun (*not get hired by any company*). Daripada membuang waktu luang, saya akhirnya memutuskan untuk berinisiatif membuat proyek secara mandiri, yang kemudian saya namakan **Summer Project**.
 
-Repositori ini berisi kumpulan proyek-proyek *Data Science* dan *Machine Learning* hasil eksperimen saya selama liburan. Melalui proyek-proyek ini, saya mengeksplorasi berbagai topik mulai dari ekstraksi data, pra-pemrosesan, hingga pembuatan model prediktif.
+Libur semester 4 kemarin *didn't go as planned* karena belum berhasil dapet posisi *internship*. Daripada *wasting time*, saya memutuskan untuk *stay productive* dengan membuat proyek mandiri yang saya namakan **Summer Project**.
+
+Repositori ini adalah *playground* saya untuk bereksperimen di dunia *Data Science* dan *Machine Learning*. Di sini, saya mendokumentasikan perjalanan saya dari nol—mulai dari *data extraction*, *preprocessing*, hingga *building predictive models*. 
+
+*It’s all about learning by doing. Feel free to explore and let me know what you think!*
 
 ## Daftar Proyek
 
