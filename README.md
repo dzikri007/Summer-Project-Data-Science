@@ -6,7 +6,7 @@ Selamat datang di repositori utama **Summer Project**!
 
 Libur semester 4 kemarin *didn't go as planned* karena belum berhasil dapet posisi *internship*. Daripada *wasting time*, saya memutuskan untuk *stay productive* dengan membuat proyek mandiri yang saya namakan **Summer Project**.
 
-Repositori ini adalah *playground* saya untuk bereksperimen di dunia *Data Science* dan *Machine Learning*. Di sini, saya mendokumentasikan perjalanan saya dari nol—mulai dari *data extraction*, *preprocessing*, hingga *building predictive models*. 
+Repositori ini adalah *playground* saya untuk bereksperimen di dunia *Data Science* dan *Machine Learning*. Di sini, saya mendokumentasikan perjalanan saya dari nol mulai dari *data extraction*, *preprocessing*, hingga *building predictive models*. 
 
 *It’s all about learning by doing. Feel free to explore and let me know what you think!*
 
