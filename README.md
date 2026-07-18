@@ -2,7 +2,7 @@
 
 Selamat datang di repositori utama **Summer Project**! 
 
-**Kenapa ada proyek ini?**
+**Kenapa ada this project?**
 
 Libur semester 4 kemarin *didn't go as planned* karena belum berhasil dapet posisi *internship*. Daripada *wasting time*, saya memutuskan untuk *stay productive* dengan membuat proyek mandiri yang saya namakan **Summer Project**.
 
