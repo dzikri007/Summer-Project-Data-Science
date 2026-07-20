@@ -45,11 +45,13 @@ Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga l
 
 ## Conclusion
 
-Jelaskan konklusi dari proyek yang dikerjakan.
+- **Identifikasi Akar Masalah:** Analisis menunjukkan bahwa attrition bukan hanya disebabkan oleh masalah finansial, tetapi juga oleh beban kerja berlebih (OverTime) dan stagnasi karier (YearsInCurrentRole).
+- **Performa Model:** Model Random Forest terbukti efektif sebagai *early warning system* untuk mendeteksi karyawan berisiko, membantu HR bertindak lebih cepat sebelum karyawan memutuskan untuk keluar.
+- **Profil Karyawan Berisiko:** Data mengidentifikasi pola bahwa karyawan dengan masa kerja tertentu dan beban kerja yang tinggi adalah kelompok yang paling rentan terhadap attrition.
 
-### Rekomendasi Action Items (Optional)
+### Rekomendasi Action Items
 
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
-
-- action item 1
-- action item 2
+1. **Pengelolaan Beban Kerja:** Melakukan peninjauan ulang terhadap kebijakan lembur (OverTime) dan mempertimbangkan penambahan staf di departemen yang memiliki attrition tinggi.
+2. **Program Pengembangan Karier:** Menyusun jalur karier (*career path*) yang lebih transparan dan memberikan kesempatan rotasi internal bagi karyawan yang sudah berada di posisi yang sama selama 2-3 tahun untuk mencegah stagnasi.
+3. **Peningkatan Peran Manajer:** Memberikan pelatihan *leadership* bagi manajer untuk meningkatkan hubungan dan komunikasi dengan tim mereka, karena durasi kerja dengan manajer terbukti berpengaruh terhadap retensi.
+4. **Implementasi Sistem Prediksi:** Mengintegrasikan model prediksi ke dalam *business dashboard* agar HR bisa memantau risiko attrition secara *real-time* dan memberikan perhatian khusus pada karyawan yang masuk dalam kategori "risiko tinggi".
