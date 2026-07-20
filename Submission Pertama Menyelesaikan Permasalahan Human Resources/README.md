@@ -1,11 +1,11 @@
 # Proyek Analisis Retensi Karyawan: Jaya Jaya Maju
 
-Aplikasi dan analisis ini dirancang untuk membantu departemen Human Resources (HR) di perusahaan Jaya Jaya Maju dalam memitigasi *attrition rate* (tingkat pengunduran diri karyawan) yang saat ini melampaui angka 10%. Proyek ini bertujuan untuk menyediakan *insight* berbasis data agar perusahaan dapat melakukan intervensi strategis yang tepat dalam mempertahankan talenta terbaik.
+Aplikasi dan analisis ini dirancang untuk membantu departemen Human Resources (HR) di perusahaan [Jaya Jaya Maju](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee) dalam memitigasi *attrition rate* (tingkat pengunduran diri karyawan) yang saat ini melampaui angka 10%. Proyek ini bertujuan untuk menyediakan *insight* berbasis data agar perusahaan dapat melakukan intervensi strategis yang tepat dalam mempertahankan talenta terbaik.
 
 ## 1. Business Understanding
 
 ### Latar Belakang Bisnis
-Jaya Jaya Maju adalah perusahaan multinasional yang berdiri sejak tahun 2000 dengan lebih dari 1.000 karyawan. Tingginya angka attrition memberikan dampak negatif yang signifikan, di antaranya:
+[Jaya Jaya Maju](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee) adalah perusahaan multinasional yang berdiri sejak tahun 2000 dengan lebih dari 1.000 karyawan. Tingginya angka attrition memberikan dampak negatif yang signifikan, di antaranya:
 - **Peningkatan Biaya Operasional**: Tingginya perputaran karyawan mengakibatkan pembengkakan biaya rekrutmen, proses seleksi, hingga *onboarding* dan pelatihan ulang.
 - **Penurunan Produktivitas**: Kepergian karyawan, terutama yang memiliki masa kerja lama, menyebabkan hilangnya akumulasi pengalaman dan keterampilan yang vital bagi operasional perusahaan.
 - **Gangguan Moral Kerja**: Ketidakpuasan karyawan yang tidak terdeteksi sejak dini dapat menciptakan budaya kerja yang tidak kondusif.
@@ -31,12 +31,16 @@ Melalui analisis ini, HR dapat bergeser dari pendekatan reaktif menjadi proaktif
 
 ### Persiapan
 
-Sumber data: ....
+Sumber data: [Dicoding Employee Dataset](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
 Setup environment:
-
+```bash
+pip install -r Requirements.txt
 ```
 
+Cara menjalankan Business Dashboard:
+```bash
+streamlit run app.py
 ```
 
 ## Business Dashboard

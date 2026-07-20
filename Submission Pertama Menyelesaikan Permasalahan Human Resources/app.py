@@ -212,6 +212,7 @@ with tab2:
         # Membuat kolom untuk Age Group
         data['Age Group'] = pd.cut(data['Age'], bins=[17, 30, 45, 65], labels=['<30 (Muda)', '30-45 (Menengah)', '>45 (Senior)'])
 
+        # pyrefly: ignore [missing-import]
         import plotly.express as px
 
         st.markdown("<br>", unsafe_allow_html=True)
@@ -309,4 +310,4 @@ with tab2:
     """)
 
 st.markdown("---")
-st.markdown("Aplikasi Prediksi Attrition Karyawan • Dikembangkan oleh **Mohammad Dzikri Raihan**")
+st.markdown("Aplikasi Prediksi Attrition Karyawan • Dikembangkan oleh **Owi**")
