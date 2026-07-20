@@ -93,7 +93,6 @@ with tab1:
     col1, col2 = st.columns(2)
     
     with col1:
-        stock_option_level = st.slider("Tingkat Opsi Saham (0-3)", min_value=0, max_value=3, value=1)
         work_life_balance = st.slider("Keseimbangan Kerja & Kehidupan (1-4)", min_value=1, max_value=4, value=3)
         performance_rating = st.slider("Nilai Performa (1-4)", min_value=1, max_value=4, value=3)
         num_companies_worked = st.number_input("Jumlah Perusahaan Sebelumnya", min_value=0, max_value=10, value=2)
@@ -132,7 +131,6 @@ with tab1:
             'PercentSalaryHike': percent_salary_hike,
             'PerformanceRating': performance_rating,
             'RelationshipSatisfaction': relationship_satisfaction,
-            'StockOptionLevel': stock_option_level,
             'TotalWorkingYears': total_working_years,
             'TrainingTimesLastYear': training_times_last_year,
             'WorkLifeBalance': work_life_balance,
@@ -211,19 +209,59 @@ with tab2:
     
     st.markdown("### Eksplorasi Data (EDA)")
     if not data.empty:
-        colA, colB = st.columns(2)
-        with colA:
-            st.write("**Distribusi Attrition Berdasarkan Departemen**")
-            fig1, ax1 = plt.subplots(figsize=(5,3))
-            sns.countplot(data=data, x='Department', hue='Attrition', palette='viridis', ax=ax1)
-            ax1.tick_params(axis='x', rotation=45)
-            st.pyplot(fig1)
+        # Membuat kolom untuk Age Group
+        data['Age Group'] = pd.cut(data['Age'], bins=[17, 30, 45, 65], labels=['<30 (Muda)', '30-45 (Menengah)', '>45 (Senior)'])
+
+        import plotly.express as px
+
+        st.markdown("<br>", unsafe_allow_html=True)
+        colA, colB, colC = st.columns(3)
         
+        with colA:
+            st.write("**Distribusi Berdasarkan Umur**")
+            fig1 = px.histogram(data, x="Age", color="Attrition", marginal="box", 
+                                color_discrete_sequence=["#1f77b4", "#ff7f0e"],
+                                height=350)
+            st.plotly_chart(fig1, use_container_width=True)
+            
         with colB:
-            st.write("**Distribusi Umur Berdasarkan Attrition**")
-            fig2, ax2 = plt.subplots(figsize=(5,3))
-            sns.histplot(data=data, x='Age', hue='Attrition', multiple='stack', palette='viridis', ax=ax2)
-            st.pyplot(fig2)
+            st.write("**Distribusi Berdasarkan Departemen**")
+            dept_counts = data.groupby(['Department', 'Attrition']).size().reset_index(name='Count')
+            fig2 = px.bar(dept_counts, x="Department", y="Count", color="Attrition", barmode="group",
+                          color_discrete_sequence=["#1f77b4", "#ff7f0e"], height=350)
+            st.plotly_chart(fig2, use_container_width=True)
+
+        with colC:
+            st.write("**Distribusi Berdasarkan Jenis Kelamin**")
+            gender_counts = data.groupby(['Gender', 'Attrition']).size().reset_index(name='Count')
+            fig3 = px.bar(gender_counts, x="Gender", y="Count", color="Attrition", barmode="group",
+                          color_discrete_sequence=["#1f77b4", "#ff7f0e"], height=350)
+            st.plotly_chart(fig3, use_container_width=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+        colD, colE, colF = st.columns(3)
+        
+        with colD:
+            st.write("**Jarak Tempuh dari Rumah (km)**")
+            fig4 = px.histogram(data, x="DistanceFromHome", color="Attrition", marginal="violin",
+                                color_discrete_sequence=["#1f77b4", "#ff7f0e"], height=350)
+            st.plotly_chart(fig4, use_container_width=True)
+            
+        with colE:
+            st.write("**Job Satisfaction**")
+            js_counts = data.groupby(['JobSatisfaction', 'Attrition']).size().reset_index(name='Count')
+            fig5 = px.bar(js_counts, x="JobSatisfaction", y="Count", color="Attrition", barmode="group",
+                          color_discrete_sequence=["#1f77b4", "#ff7f0e"], height=350)
+            fig5.update_xaxes(type='category')
+            st.plotly_chart(fig5, use_container_width=True)
+
+        with colF:
+            st.write("**Environment Satisfaction**")
+            es_counts = data.groupby(['EnvironmentSatisfaction', 'Attrition']).size().reset_index(name='Count')
+            fig6 = px.bar(es_counts, x="EnvironmentSatisfaction", y="Count", color="Attrition", barmode="group",
+                          color_discrete_sequence=["#1f77b4", "#ff7f0e"], height=350)
+            fig6.update_xaxes(type='category')
+            st.plotly_chart(fig6, use_container_width=True)
     else:
         st.warning("Dataset tidak ditemukan untuk memuat visualisasi EDA.")
 

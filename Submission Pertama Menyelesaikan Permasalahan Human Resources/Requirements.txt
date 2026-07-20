@@ -7,3 +7,4 @@ jupyter
 sqlalchemy 
 scikit-learn
 joblib
+plotly
