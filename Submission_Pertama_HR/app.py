@@ -5,6 +5,7 @@ import numpy as np
 import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 # Konfigurasi Halaman
 st.set_page_config(
@@ -13,11 +14,15 @@ st.set_page_config(
     layout="wide"
 )
 
+# Menentukan lokasi folder script saat ini
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Load model dan scaler
 @st.cache_resource
 def load_model():
     try:
-        return joblib.load("Model.joblib")
+        model_path = os.path.join(BASE_DIR, "Model.joblib")
+        return joblib.load(model_path)
     except Exception as e:
         st.error(f"Error memuat Model.joblib: {e}")
         return None
@@ -25,7 +30,8 @@ def load_model():
 @st.cache_resource
 def load_scaler():
     try:
-        return joblib.load("scaler.joblib")
+        scaler_path = os.path.join(BASE_DIR, "scaler.joblib")
+        return joblib.load(scaler_path)
     except Exception as e:
         st.error(f"Error memuat scaler.joblib: {e}")
         return None
@@ -34,10 +40,12 @@ def load_scaler():
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv("dataset/employee_data.csv")
+        data_path = os.path.join(BASE_DIR, "dataset", "employee_data.csv")
+        df = pd.read_csv(data_path)
         df.dropna(subset=['Attrition'], inplace=True)
         return df
-    except:
+    except Exception as e:
+        st.error(f"Error memuat data: {e}")
         return pd.DataFrame()
 
 model = load_model()
