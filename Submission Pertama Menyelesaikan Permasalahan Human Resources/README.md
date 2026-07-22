@@ -45,15 +45,21 @@ streamlit run app.py
 
 ## Business Dashboard
 
-Dashboard bisnis dibuat untuk membantu departemen HR dalam memonitor berbagai faktor yang mempengaruhi tingginya *attrition rate* di perusahaan Jaya Jaya Maju. Dashboard ini menampilkan visualisasi interaktif mengenai:
-- Distribusi tingkat *attrition* berdasarkan departemen.
-- Pengaruh usia, jarak tempuh, dan tingkat kepuasan (kerja & lingkungan) terhadap keputusan karyawan untuk keluar.
-- Identifikasi profil karyawan yang berisiko tinggi.
+Proyek ini menyertakan **dua buah dashboard** untuk memberikan solusi yang komprehensif bagi departemen HR di perusahaan Jaya Jaya Maju:
 
-**Akses Dashboard:**
-- **File Database:** `metabase.db.mv.db` 
+### 1. Metabase Dashboard (Business Intelligence)
+Dashboard ini difokuskan pada pemantauan metrik bisnis (*business metrics*) dan visualisasi data (*Exploratory Data Analysis*) untuk memahami faktor-faktor penyebab tingginya *attrition rate*.
+**Akses Metabase:**
+- **File Database:** `metabase.db.mv.db` (disertakan di dalam *repository*)
 - **Email/Username:** `root@mail.com`
 - **Password:** `root123`
+
+### 2. Streamlit Dashboard (Machine Learning & Predictive Analytics)
+Dashboard interaktif ini berfungsi sebagai *Early Warning System*. HR dapat memasukkan data profil karyawan (seperti usia, departemen, kepuasan kerja, dll.) melalui *form*, dan model **Machine Learning (Random Forest)** akan secara *real-time* memprediksi risiko karyawan tersebut untuk *resign*. Dashboard ini juga memuat grafik interaktif berbasis *Plotly*.
+**Cara Menjalankan Streamlit:**
+```bash
+streamlit run app.py
+```
 
 ## Conclusion
 
