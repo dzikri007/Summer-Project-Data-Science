@@ -45,7 +45,15 @@ streamlit run app.py
 
 ## Business Dashboard
 
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+Dashboard bisnis dibuat untuk membantu departemen HR dalam memonitor berbagai faktor yang mempengaruhi tingginya *attrition rate* di perusahaan Jaya Jaya Maju. Dashboard ini menampilkan visualisasi interaktif mengenai:
+- Distribusi tingkat *attrition* berdasarkan departemen.
+- Pengaruh usia, jarak tempuh, dan tingkat kepuasan (kerja & lingkungan) terhadap keputusan karyawan untuk keluar.
+- Identifikasi profil karyawan yang berisiko tinggi.
+
+**Akses Dashboard:**
+- **File Database:** `metabase.db.mv.db` 
+- **Email/Username:** `root@mail.com`
+- **Password:** `root123`
 
 ## Conclusion
 
