@@ -18,14 +18,16 @@ st.set_page_config(
 def load_model():
     try:
         return joblib.load("Model.joblib")
-    except:
+    except Exception as e:
+        st.error(f"Error memuat Model.joblib: {e}")
         return None
 
 @st.cache_resource
 def load_scaler():
     try:
         return joblib.load("scaler.joblib")
-    except:
+    except Exception as e:
+        st.error(f"Error memuat scaler.joblib: {e}")
         return None
 
 # Load dataset untuk visualisasi EDA
