@@ -56,7 +56,11 @@ Dashboard ini difokuskan pada pemantauan metrik bisnis (*business metrics*) dan 
 
 ### 2. Streamlit Dashboard (Machine Learning & Predictive Analytics)
 Dashboard interaktif ini berfungsi sebagai *Early Warning System*. HR dapat memasukkan data profil karyawan (seperti usia, departemen, kepuasan kerja, dll.) melalui *form*, dan model **Machine Learning (Random Forest)** akan secara *real-time* memprediksi risiko karyawan tersebut untuk *resign*. Dashboard ini juga memuat grafik interaktif berbasis *Plotly*.
-**Cara Menjalankan Streamlit:**
+
+**Akses Langsung (Live Dashboard):**
+🔗 **[Dashboard HR Attrition Prediction](https://dashboard-hrd-attrition.streamlit.app/)**
+
+**Cara Menjalankan Secara Lokal (Localhost):**
 ```bash
 streamlit run app.py
 ```
