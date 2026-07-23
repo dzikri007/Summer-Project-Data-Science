@@ -23,6 +23,6 @@ Berikut adalah ringkasan seluruh proyek yang ada di dalam repositori ini:
 | **5** | [Titanic Survival Prediction](./Titanic%20Survival%20Prediction%20Logistic%20Regression) | EDA, Feature Engineering, Scikit-Learn Pipelines, Logistic Regression, SVM | Classification |
 | **6** | [Twitter Data Crawling](./Scraping%20Crawl%20data%20twitter) | Web scraping, Handling headless browsers (Playwright), Managing rate limits | Data Extraction |
 | **7** | [YouTube Scraping & Sentiment Analysis](./Scraping%20youtube%20data%20api%20v3) | YouTube Data API v3, Text cleaning (RegEx), Hugging Face Transformers (NLP) | Data Extraction & NLP |
-| **8** | [Human Resources Attrition Prediction](./Submission%20Pertama%20Menyelesaikan%20Permasalahan%20Human%20Resources) | EDA, Data Preprocessing, Classification Models, Model Evaluation (Submission Pertama Data Science terapan Dicoding) | Classification |
+| **8** | [Human Resources Attrition Prediction](./Submission_Pertama_HR) | EDA, Data Preprocessing, Random Forest, Streamlit Dashboard, Metabase BI, Cloud Deployment | Classification & BI |
 
 > Silakan klik pada masing-masing nama proyek untuk masuk ke direktorinya dan melihat dokumentasi serta kode secara lebih lengkap!
