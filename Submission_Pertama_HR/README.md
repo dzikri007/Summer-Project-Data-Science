@@ -33,31 +33,7 @@ Melalui analisis ini, HR dapat bergeser dari pendekatan reaktif menjadi proaktif
 
 Sumber data: [Dicoding Employee Dataset](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
-### Versi Python yang Digunakan
-- **Python Version**: `Python 3.12`
-  
-### 1. Cara Membuat Virtual Environment
-Agar lingkungan pengembangan tetap terisolasi dan stabil, jalankan perintah berikut di terminal/command prompt pada folder proyek:
-```bash
-python -m venv venv
-```
-
-Aktifkan virtual environment:
-
-* **Windows (Command Prompt / PowerShell):**
-```bash
-venv\Scripts\activate
-```
-
-* **macOS / Linux:**
-```bash
-source venv/bin/activate
-```
-
-### 2. Proses Instalasi Dependencies
-
-Setelah virtual environment aktif, instal seluruh *library* yang dibutuhkan dengan perintah:
-
+Setup environment:
 ```bash
 pip install -r requirements.txt
 ```
