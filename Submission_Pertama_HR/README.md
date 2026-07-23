@@ -29,51 +29,96 @@ Melalui analisis ini, HR dapat bergeser dari pendekatan reaktif menjadi proaktif
 - **Pembuatan Business Dashboard**: Menyajikan visualisasi interaktif untuk memonitor faktor risiko attrition secara berkala.
 - **Rekomendasi Strategis**: Memberikan langkah konkret bagi manajemen untuk menekan angka attrition.
 
-### Persiapan
+## 3. Persiapan & Cara Menjalankan Proyek (Setup Environment)
 
 Sumber data: [Dicoding Employee Dataset](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
-Setup environment:
+### Versi Python yang Digunakan
+- **Python Version**: `Python 3.12` *(atau sesuaikan dengan versi interpreter yang kamu pakai)*
+
+### 1. Cara Membuat Virtual Environment
+Agar lingkungan pengembangan tetap terisolasi dan stabil, jalankan perintah berikut di terminal/command prompt pada folder proyek:
 ```bash
-pip install -r Requirements.txt
+python -m venv venv
 ```
 
-Cara menjalankan Business Dashboard:
+Aktifkan virtual environment:
+
+* **Windows (Command Prompt / PowerShell):**
+```bash
+venv\Scripts\activate
+```
+
+* **macOS / Linux:**
+```bash
+source venv/bin/activate
+```
+
+### 2. Proses Instalasi Dependencies
+
+Setelah virtual environment aktif, instal seluruh *library* yang dibutuhkan dengan perintah:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Cara Menjalankan Streamlit Dashboard (Machine Learning App)
+
 ```bash
 streamlit run app.py
 ```
 
-## Business Dashboard
+---
+
+## 4. Business Dashboard & Metabase Setup
 
 Proyek ini menyertakan **dua buah dashboard** untuk memberikan solusi yang komprehensif bagi departemen HR di perusahaan Jaya Jaya Maju:
 
-### 1. Metabase Dashboard (Business Intelligence)
-Dashboard ini difokuskan pada pemantauan metrik bisnis (*business metrics*) dan visualisasi data (*Exploratory Data Analysis*) untuk memahami faktor-faktor penyebab tingginya *attrition rate*.
-**Akses Metabase:**
-- **File Database:** `metabase.db.mv.db` (disertakan di dalam *repository*)
-- **Email/Username:** `root@mail.com`
-- **Password:** `root123`
+### A. Metabase Dashboard (Business Intelligence)
 
-### 2. Streamlit Dashboard (Machine Learning & Predictive Analytics)
-Dashboard interaktif ini berfungsi sebagai *Early Warning System*. HR dapat memasukkan data profil karyawan (seperti usia, departemen, kepuasan kerja, dll.) melalui *form*, dan model **Machine Learning (Random Forest)** akan secara *real-time* memprediksi risiko karyawan tersebut untuk *resign*. Dashboard ini juga memuat grafik interaktif berbasis *Plotly*.
+Dashboard ini difokuskan pada pemantauan metrik bisnis (*business metrics*) dan visualisasi data (*Exploratory Data Analysis*) untuk memahami faktor-faktor penyebab tingginya *attrition rate*. Label status karyawan pada dashboard telah dipetakan menjadi teks **"Stay"** dan **"Resign"** agar lebih mudah dipahami oleh pengguna non-teknis.
 
-**Akses Langsung (Live Dashboard):**
-🔗 **[Dashboard HR Attrition Prediction](https://dashboard-hrd-attrition.streamlit.app/)**
+**Panduan Menjalankan Metabase (Lokal):**
 
-**Cara Menjalankan Secara Lokal (Localhost):**
+1. Pastikan Docker sudah terinstal di komputer.
+2. Gunakan versi Metabase resmi yang stabil (disarankan menggunakan versi latihan **`metabase/metabase:v0.46.4`**):
 ```bash
-streamlit run app.py
+docker run -d -p 3000:3000 --name metabase metabase/metabase:v0.46.4
 ```
 
-## Conclusion
+3. Salin (*copy*) file database `metabase.db.mv.db` yang disertakan di dalam repository ke dalam kontainer Docker, atau *mount* foldernya saat menjalankan kontainer.
+4. Akses dashboard melalui browser di alamat: **`http://localhost:3000`**
+5. Login menggunakan kredensial berikut:
+* **Email/Username:** `root@mail.com`
+* **Password:** `root123`
 
-- **Identifikasi Akar Masalah:** Analisis menunjukkan bahwa attrition bukan hanya disebabkan oleh masalah finansial, tetapi juga oleh beban kerja berlebih (OverTime) dan stagnasi karier (YearsInCurrentRole).
-- **Performa Model:** Model Random Forest terbukti efektif sebagai *early warning system* untuk mendeteksi karyawan berisiko, membantu HR bertindak lebih cepat sebelum karyawan memutuskan untuk keluar.
-- **Profil Karyawan Berisiko:** Data mengidentifikasi pola bahwa karyawan dengan masa kerja tertentu dan beban kerja yang tinggi adalah kelompok yang paling rentan terhadap attrition.
+### B. Streamlit Dashboard (Machine Learning & Predictive Analytics)
+
+Dashboard interaktif ini berfungsi sebagai *Early Warning System*. HR dapat memasukkan data profil karyawan melalui *form*, dan model **Machine Learning (Random Forest)** akan secara *real-time* memprediksi risiko karyawan tersebut untuk *resign*.
+
+**Akses Langsung (Live Dashboard):**
+🖇️ **[Dashboard HR Attrition Prediction](https://dashboard-hrd-attrition.streamlit.app/)**
+
+---
+
+## 5. Conclusion
+
+Sesuai dengan hasil analisis data dan pemodelan *machine learning*, kesimpulan dari proyek ini dibagi menjadi dua aspek utama:
+
+### 1. Kesimpulan Analisis Bisnis (Faktor & Karakteristik Attrition)
+
+* **Beban Kerja & Lembur (OverTime):** Karyawan yang sering mengambil jam lembur (*OverTime = Yes*) memiliki probabilitas dan rasio *resign* yang jauh lebih tinggi dibandingkan yang tidak lembur.
+* **Kepuasan Kerja (Job Satisfaction):** Tingkat kepuasan kerja yang rendah (skala 1-2) berkorelasi signifikan dengan tingginya angka pengunduran diri karyawan.
+* **Stagnasi Karier:** Faktor durasi kerja dalam peran saat ini (*YearsInCurrentRole*) dan kedekatan dengan manajer juga menjadi pemicu penting yang mendorong karyawan mencari peluang di tempat lain.
+
+### 2. Kesimpulan Performa Model & Fitur Penting
+
+* **Evaluasi Kuantitatif Model:** Model *Machine Learning* (terutama Random Forest) yang diuji pada notebook menunjukkan performa yang andal dengan tingkat **Accuracy** yang tinggi serta metrik evaluasi (*Precision, Recall, F1-Score*) yang optimal dalam mengidentifikasi kelas karyawan yang berisiko *resign* (minoritas).
+* **Feature Importance:** Berdasarkan analisis *feature importance* pada model, variabel yang paling berpengaruh kuat terhadap keputusan karyawan meliputi tingkat pendapatan bulanan (*MonthlyIncome*), total pengalaman kerja (*TotalWorkingYears*), usia (*Age*), dan kebiasaan lembur (*OverTime*).
 
 ### Rekomendasi Action Items
 
-1. **Pengelolaan Beban Kerja:** Melakukan peninjauan ulang terhadap kebijakan lembur (OverTime) dan mempertimbangkan penambahan staf di departemen yang memiliki attrition tinggi.
+1. **Pengelolaan Beban Kerja:** Melakukan peninjauan ulang terhadap kebijakan lembur (*OverTime*) dan mempertimbangkan penambahan staf di departemen yang memiliki *attrition* tinggi.
 2. **Program Pengembangan Karier:** Menyusun jalur karier (*career path*) yang lebih transparan dan memberikan kesempatan rotasi internal bagi karyawan yang sudah berada di posisi yang sama selama 2-3 tahun untuk mencegah stagnasi.
-3. **Peningkatan Peran Manajer:** Memberikan pelatihan *leadership* bagi manajer untuk meningkatkan hubungan dan komunikasi dengan tim mereka, karena durasi kerja dengan manajer terbukti berpengaruh terhadap retensi.
-4. **Implementasi Sistem Prediksi:** Mengintegrasikan model prediksi ke dalam *business dashboard* agar HR bisa memantau risiko attrition secara *real-time* dan memberikan perhatian khusus pada karyawan yang masuk dalam kategori "risiko tinggi".
+3. **Peningkatan Peran Manajer:** Memberikan pelatihan *leadership* bagi manajer untuk meningkatkan hubungan dan komunikasi dengan tim mereka.
+4. **Implementasi Sistem Prediksi:** Mengintegrasikan model prediksi ke dalam *business dashboard* agar HR bisa memantau risiko *attrition* secara *real-time* dan memberikan perhatian khusus pada karyawan yang masuk dalam kategori risiko tinggi.
