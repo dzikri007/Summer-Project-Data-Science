@@ -34,8 +34,8 @@ Melalui analisis ini, HR dapat bergeser dari pendekatan reaktif menjadi proaktif
 Sumber data: [Dicoding Employee Dataset](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
 ### Versi Python yang Digunakan
-- **Python Version**: `Python 3.12` *(atau sesuaikan dengan versi interpreter yang kamu pakai)*
-
+- **Python Version**: `Python 3.12`
+  
 ### 1. Cara Membuat Virtual Environment
 Agar lingkungan pengembangan tetap terisolasi dan stabil, jalankan perintah berikut di terminal/command prompt pada folder proyek:
 ```bash
