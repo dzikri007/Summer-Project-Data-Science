@@ -1,24 +1,24 @@
-# AirBnb Rental Price Prediction
+# Prediksi Harga Sewa AirBnb
 
-Predicts AirBnB rental prices based on listing features such as neighbourhood group, room type, location, minimum nights, and availability. Performs data preprocessing, outlier analysis, label encoding, and trains a Linear Regression model.
+Memprediksi harga sewa AirBnB berdasarkan fitur-fitur listing seperti grup lingkungan (neighbourhood group), tipe kamar, lokasi, jumlah malam minimum, dan ketersediaan. Melakukan prapemrosesan data, analisis outlier, label encoding, dan melatih model Regresi Linear.
 
 ## Dataset
 
-`dataSP23.csv` -- contains 27,379 AirBnB listings with columns including neighbourhood group, latitude, longitude, room type, price, minimum nights, host listing count, and availability.
+`dataSP23.csv` -- berisi 27.379 listing AirBnB dengan kolom termasuk grup lingkungan, lintang (latitude), bujur (longitude), tipe kamar, harga, jumlah malam minimum, jumlah listing tuan rumah, dan ketersediaan.
 
-## Tech Stack
+## Tech Stack (Teknologi yang Digunakan)
 
 - Pandas
 - NumPy
 - scikit-learn (LinearRegression, LabelEncoder, StandardScaler, train_test_split, r2_score)
 - Matplotlib
 
-## Results
+## Hasil
 
-The Linear Regression model achieves an R2 score of 0.14 on the test set. The low score is attributed to significant outliers in the dataset, which negatively impact model performance.
+Model Regresi Linear mencapai skor R2 sebesar 0,14 pada data uji (test set). Skor yang rendah ini disebabkan oleh adanya outlier yang signifikan dalam dataset, yang berdampak negatif pada kinerja model.
 
-## How to Run
+## Cara Menjalankan
 
-1. Ensure `dataSP23.csv` is in the same directory as the notebook.
-2. Open `AirBnB.ipynb` in Jupyter Notebook or JupyterLab.
-3. Run all cells to preprocess data, train the model, and view predictions and visualizations.
+1. Pastikan file `dataSP23.csv` berada di direktori yang sama dengan notebook.
+2. Buka `AirBnB.ipynb` di Jupyter Notebook atau JupyterLab.
+3. Jalankan semua sel untuk melakukan prapemrosesan data, melatih model, serta melihat prediksi dan visualisasi.
