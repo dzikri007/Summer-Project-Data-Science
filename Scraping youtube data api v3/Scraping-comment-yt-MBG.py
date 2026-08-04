@@ -1,5 +1,7 @@
 import csv
+# pyrefly: ignore [missing-import]
 from googleapiclient.discovery import build
+# pyrefly: ignore [missing-import]
 from googleapiclient.errors import HttpError
 
 # Fungsi untuk mendapatkan semua data komentar dari video YouTube
@@ -62,7 +64,7 @@ def get_all_comments(video_id, api_key):
         return None
 
 # Setel video ID dan kunci API Anda
-video_id = 'SVI8xheP-j4'
+video_id = 'SVI8xheP-j'
 api_key = 'API Key' # Masukan api key anda disini
 
 # Panggil fungsi untuk mendapatkan semua data komentar

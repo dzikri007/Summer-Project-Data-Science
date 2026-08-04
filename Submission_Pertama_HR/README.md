@@ -33,12 +33,36 @@ Melalui analisis ini, HR dapat bergeser dari pendekatan reaktif menjadi proaktif
 
 Sumber data: [Dicoding Employee Dataset](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
 
-Setup environment:
+### A. Versi Python yang Digunakan
+- **Python Version**: `Python 3.12` *(sesuaikan jika kamu menggunakan versi lain seperti 3.10 / 3.11)*
+
+### B. Cara Membuat Virtual Environment
+Sebelum menjalankan proyek, sangat disarankan untuk membuat dan mengaktifkan *virtual environment* agar isolasi *dependency* terjaga:
+```bash
+python -m venv venv
+```
+
+Aktifkan *virtual environment*:
+
+* **Windows (CMD / PowerShell):**
+```bash
+venv\Scripts\activate
+```
+
+* **macOS / Linux:**
+```bash
+source venv/bin/activate
+```
+
+### C. Instalasi Dependencies & Menjalankan Aplikasi
+
+Setelah *virtual environment* aktif, instal seluruh *library* yang dibutuhkan:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Cara Menjalankan Streamlit Dashboard (Machine Learning App)
+Cara Menjalankan Streamlit Dashboard (Machine Learning App):
 
 ```bash
 streamlit run app.py
