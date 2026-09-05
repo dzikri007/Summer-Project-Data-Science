@@ -76,15 +76,13 @@ Password: `wvh2ldOygMeDkH`
 
 ## Menjalankan Sistem Machine Learning
 
-Prototype machine learning berupa aplikasi web telah dibangun menggunakan **Streamlit**. Aplikasi ini dapat dijalankan secara lokal di komputer masing-masing.
+Prototype machine learning yang telah dibangun menggunakan **Streamlit** dapat diakses secara langsung melalui tautan berikut:
+
+🔗 **[Link Aplikasi Streamlit Live](https://permasalahaninstitusi.streamlit.app/)**
 
 ### Cara Penggunaan Aplikasi:
 
-1. Buka terminal/command prompt, pastikan sudah berada di dalam folder proyek, dan jalankan perintah berikut:
-   ```bash
-   streamlit run prediksi_dropout_app.py
-   ```
-2. Aplikasi akan terbuka secara otomatis di browser pada alamat `http://localhost:8501`.
+1. Buka link aplikasi di atas, atau jika ingin menjalankan secara lokal, gunakan perintah `streamlit run prediksi_dropout_app.py`.
 2. Pada panel **sidebar** di sebelah kiri, lengkapi seluruh data mahasiswa yang diminta, meliputi:
    - **Data Demografi:** Jenis kelamin, usia, kebangsaan, status pernikahan
    - **Data Pendaftaran:** Mode pendaftaran, pilihan kursus, program studi
