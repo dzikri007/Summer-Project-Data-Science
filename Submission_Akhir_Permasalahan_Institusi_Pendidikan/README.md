@@ -76,13 +76,15 @@ Password: `wvh2ldOygMeDkH`
 
 ## Menjalankan Sistem Machine Learning
 
-Prototype machine learning yang telah dibangun menggunakan **Streamlit** dapat diakses melalui tautan berikut:
-
-🔗 **[Link Aplikasi Streamlit](https://owiaja-prediksi-dropout.streamlit.app/)**
+Prototype machine learning berupa aplikasi web telah dibangun menggunakan **Streamlit**. Aplikasi ini dapat dijalankan secara lokal di komputer masing-masing.
 
 ### Cara Penggunaan Aplikasi:
 
-1. Buka link aplikasi di atas atau jalankan secara lokal dengan perintah `streamlit run prediksi_dropout_app.py`.
+1. Buka terminal/command prompt, pastikan sudah berada di dalam folder proyek, dan jalankan perintah berikut:
+   ```bash
+   streamlit run prediksi_dropout_app.py
+   ```
+2. Aplikasi akan terbuka secara otomatis di browser pada alamat `http://localhost:8501`.
 2. Pada panel **sidebar** di sebelah kiri, lengkapi seluruh data mahasiswa yang diminta, meliputi:
    - **Data Demografi:** Jenis kelamin, usia, kebangsaan, status pernikahan
    - **Data Pendaftaran:** Mode pendaftaran, pilihan kursus, program studi
