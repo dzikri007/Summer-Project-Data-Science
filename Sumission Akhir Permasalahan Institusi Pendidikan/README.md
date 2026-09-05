@@ -55,8 +55,6 @@ pip install -r requirements.txt
 streamlit run prediksi_dropout_app.py
 ```
 
-Aplikasi akan terbuka otomatis di browser pada alamat `http://localhost:8501`.
-
 ## Business Dashboard
 
 Dashboard dibuat menggunakan **Metabase** yang terhubung ke database PostgreSQL untuk memvisualisasikan data performa mahasiswa secara interaktif.
