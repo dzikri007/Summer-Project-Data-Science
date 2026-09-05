@@ -1,10 +1,3 @@
-# ============================================================
-# Aplikasi Prediksi Status Dropout Mahasiswa
-# Dibuat oleh: Mohammad Dzikri Raihan
-# Email: dzikrijokowi@gmail.com
-# Dicoding ID: owiaja
-# ============================================================
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -74,7 +67,10 @@ st.markdown("""
 @st.cache_resource
 def muat_model():
     """Memuat model machine learning yang sudah dilatih."""
-    return joblib.load('model.pkl')
+    import os
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(BASE_DIR, 'model.pkl')
+    return joblib.load(model_path)
 
 
 # --- Opsi input kategorikal ---
